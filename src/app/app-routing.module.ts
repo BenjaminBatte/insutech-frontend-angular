@@ -11,3 +11,6 @@ export const routes: Routes = [
   { path: 'edit-policy/:id', component: EditPolicyComponent },
   { path: '', redirectTo: 'view-policies', pathMatch: 'full' }
 ];
+
+
+

@@ -1,1 +1,34 @@
-<p>view-policies works!</p>
+<h2>All Policies</h2>
+
+
+<div *ngIf="error" class="error-message">{{ error }}</div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Policy Number</th>
+      <th>Status</th>
+      <th>Policy Type</th>
+      <th>Vehicle</th>
+      <th>Policyholder</th>
+      <th>Premium</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+<tr *ngFor="let policy of policies$ | async">
+    <td>{{ policy.policyNumber }}</td>
+    <td>{{ policy.status }}</td>
+    <td>{{ policy.policyType }}</td>
+    <td>{{ policy.vehicleMake }} {{ policy.vehicleModel }} ({{ policy.vehicleYear }})</td>
+    <td>{{ policy.firstName }} {{ policy.lastName }}</td>
+    <td>${{ policy.premiumAmount }}</td>
+    <td>
+      <button *ngIf="policy.id !== undefined" (click)="deletePolicy(policy.id!)">Delete</button>
+    </td>
+  </tr>
+  
+  </tbody>
+</table>
