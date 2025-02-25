@@ -1,0 +1,40 @@
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, select, button {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  .full-width {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
